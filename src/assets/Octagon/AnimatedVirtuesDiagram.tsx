@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useAnimation, useInView, type Variants } from "framer-motion";
 
-type AnimationType = "auto" | "manual" | "scroll" | "hover";
+type AnimationType = "auto" | "manual" | "scroll" | "scroll-reverse" | "hover";
 type ShapeId =
   | "love"
   | "humility"
@@ -24,7 +24,8 @@ interface AnimatedVirtuesDiagramProps {
   strokeWidth?: number;
   fillColor?: string;
   fillOpacity?: number;
-  drawMode?: "path" | "lines"; // Choose between drawing as path or separate lines
+  drawMode?: "path" | "lines";
+  scrollThreshold?: number; // How much of the element should be visible to trigger (0-1)
   onAnimationComplete?: () => void;
   onAnimationStart?: () => void;
 }
@@ -48,7 +49,8 @@ const AnimatedVirtuesDiagram: React.FC<AnimatedVirtuesDiagramProps> = ({
   height = "297mm",
   strokeColor = "#000000",
   strokeWidth = 1.39153,
-  drawMode = "lines", // Default to lines for better effect
+  drawMode = "lines",
+  scrollThreshold = 0.3,
   onAnimationComplete,
   onAnimationStart,
 }) => {
@@ -56,7 +58,17 @@ const AnimatedVirtuesDiagram: React.FC<AnimatedVirtuesDiagramProps> = ({
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
   const svgRef = useRef(null);
-  const isInView = useInView(svgRef, { once: true, amount: 0.3 });
+
+  // Different useInView configurations based on animation type
+  const isInViewOnce = useInView(svgRef, {
+    once: true,
+    amount: scrollThreshold,
+  });
+
+  const isInViewReversible = useInView(svgRef, {
+    once: false,
+    amount: scrollThreshold,
+  });
 
   // Drawing animation variants
   const drawVariants: Variants = {
@@ -111,9 +123,8 @@ const AnimatedVirtuesDiagram: React.FC<AnimatedVirtuesDiagramProps> = ({
     baseDelay: number,
     transform?: string
   ) => {
-    const lineDelay = elementDuration / 4; // Divide duration by 4 sides
+    const lineDelay = elementDuration / 4;
 
-    // Define the four lines of the rectangle
     const lines = [
       `M ${x} ${y} L ${x + width} ${y}`, // top
       `M ${x + width} ${y} L ${x + width} ${y + height}`, // right
@@ -137,20 +148,51 @@ const AnimatedVirtuesDiagram: React.FC<AnimatedVirtuesDiagramProps> = ({
     ));
   };
 
-  // Start animation based on type
+  // Handle scroll-based animations
+  useEffect(() => {
+    if (animationType === "scroll" && isInViewOnce) {
+      controls.start("visible");
+      setIsPlaying(true);
+      if (!hasStarted) {
+        setHasStarted(true);
+        onAnimationStart?.();
+      }
+    }
+  }, [animationType, isInViewOnce, controls, hasStarted, onAnimationStart]);
+
+  // Handle reversible scroll animation
+  useEffect(() => {
+    if (animationType === "scroll-reverse") {
+      if (isInViewReversible) {
+        controls.start("visible");
+        setIsPlaying(true);
+        if (!hasStarted) {
+          setHasStarted(true);
+          onAnimationStart?.();
+        }
+      } else {
+        // Reverse the animation when scrolled out of view
+        controls.start("hidden");
+        setIsPlaying(false);
+      }
+    }
+  }, [
+    animationType,
+    isInViewReversible,
+    controls,
+    hasStarted,
+    onAnimationStart,
+  ]);
+
+  // Handle auto animation
   useEffect(() => {
     if (animationType === "auto") {
       controls.start("visible");
       setIsPlaying(true);
       setHasStarted(true);
       onAnimationStart?.();
-    } else if (animationType === "scroll" && isInView) {
-      controls.start("visible");
-      setIsPlaying(true);
-      setHasStarted(true);
-      onAnimationStart?.();
     }
-  }, [animationType, controls, isInView, onAnimationStart]);
+  }, [animationType, controls, onAnimationStart]);
 
   // Manual controls
   const handlePlay = () => {
@@ -169,12 +211,14 @@ const AnimatedVirtuesDiagram: React.FC<AnimatedVirtuesDiagramProps> = ({
 
   const handleRestart = () => {
     controls.set("hidden");
-    controls.start("visible");
-    setIsPlaying(true);
-    if (!hasStarted) {
-      onAnimationStart?.();
-      setHasStarted(true);
-    }
+    setTimeout(() => {
+      controls.start("visible");
+      setIsPlaying(true);
+      if (!hasStarted) {
+        onAnimationStart?.();
+        setHasStarted(true);
+      }
+    }, 100);
   };
 
   // Hover handlers
@@ -433,6 +477,21 @@ const AnimatedVirtuesDiagram: React.FC<AnimatedVirtuesDiagramProps> = ({
             Pause
           </button>
           <button onClick={handleRestart}>Restart</button>
+        </div>
+      )}
+
+      {/* Debug info for scroll animations */}
+      {(animationType === "scroll" || animationType === "scroll-reverse") && (
+        <div
+          style={{
+            marginBottom: "0.5rem",
+            fontSize: "0.875rem",
+            color: "#666",
+          }}
+        >
+          {animationType === "scroll-reverse"
+            ? `In view: ${isInViewReversible ? "Yes" : "No"}`
+            : `Triggered: ${isInViewOnce ? "Yes" : "No"}`}
         </div>
       )}
 
