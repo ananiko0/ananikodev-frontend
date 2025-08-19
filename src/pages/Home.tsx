@@ -10,7 +10,14 @@ function Home() {
         <meta name="description" content={meta.description} />
         <meta name="keywords" content={meta.keywords} />
       </Helmet>
-      <div>Home Page</div>
+      <div>
+        Home Page
+        <div className="bg-red-500 text-white p-4">
+          <h1 className="text-3xl font-bold bg-red-500">
+            Tailwind is working!
+          </h1>
+        </div>
+      </div>
     </>
   );
 }
