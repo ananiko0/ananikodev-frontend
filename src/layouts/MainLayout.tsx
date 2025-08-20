@@ -3,12 +3,12 @@ import Navigation from "@/components/navigation/Navigation";
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className=" min-h-screen bg-background">
       {/* Navigation */}
       <Navigation />
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 min-h-screen pt-20">
         <Outlet />
       </main>
 
