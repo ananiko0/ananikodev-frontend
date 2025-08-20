@@ -2,9 +2,9 @@ import { Helmet } from "react-helmet-async";
 import { pagesMetadata } from "../config/metadata";
 import Hero from "@/components/sections/Hero";
 import AboutBrief from "@/components/sections/AboutBrief";
-import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import WorkExperience from "@/components/sections/WorkExperience";
 import Contact from "@/components/sections/Contact";
+import FeaturedProjects from "@/components/sections/FeaturedProjects";
 
 function Home() {
   const meta = pagesMetadata.home;

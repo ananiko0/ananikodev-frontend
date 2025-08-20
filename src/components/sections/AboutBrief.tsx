@@ -51,7 +51,6 @@ const AboutBrief = () => {
                 </div>
               </div>
             </div>
-
             <div className="p-4 border rounded-lg flex items-start gap-3">
               <Code2 className="h-5 w-5 text-primary mt-1" />
               <div>

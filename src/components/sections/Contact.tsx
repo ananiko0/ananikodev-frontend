@@ -58,9 +58,9 @@ const Contact = () => {
                 }
                 className="group"
               >
-                <Card className="p-6 hover:shadow-lg transition-all hover:border-primary/50 hover:-translate-y-1">
+                <Card className="p-6 hover:shadow-lg transition-all  hover:-translate-y-1">
                   <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    <div className="p-3 bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                       <Icon className="h-5 w-5" />
                     </div>
                     <div>
@@ -77,7 +77,7 @@ const Contact = () => {
         </div>
 
         {/* Optional: Quick CTA */}
-        <div className="text-center p-8 rounded-lg bg-muted/50">
+        <div className="text-center p-8 bg-muted/50">
           <p className="text-lg font-semibold mb-2">
             Currently Available for Opportunities
           </p>
