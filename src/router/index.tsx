@@ -1,7 +1,8 @@
-import { createBrowserRouter, Outlet } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import { lazy } from "react";
 import ErrorPage from "../pages/ErrorPage";
 import SuspenseWrapper from "./SuspenseWrapper";
+import MainLayout from "@/layouts/MainLayout";
 
 // Lazy load all pages for better performance
 const Home = lazy(() => import("../pages/Home"));
@@ -16,7 +17,7 @@ const Calendar = lazy(() => import("../pages/Calendar"));
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Outlet />, // Will be replaced with MainLayout later
+    element: <MainLayout />,
     errorElement: <ErrorPage />,
     children: [
       {
