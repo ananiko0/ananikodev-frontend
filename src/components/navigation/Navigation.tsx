@@ -8,19 +8,19 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Projects", path: "/projects" },
-    { name: "Blog", path: "/blog" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Roadmap", path: "/roadmap" },
-    { name: "Calendar", path: "/calendar" },
+    //     { name: "Blog", path: "/blog" },
+    //     { name: "Gallery", path: "/gallery" },
+    //     { name: "Roadmap", path: "/roadmap" },
+    //     { name: "Calendar", path: "/calendar" },
   ];
 
   return (
-    <nav className="border-b">
+    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo/Name */}
           <Link to="/" className="text-xl font-bold">
-            Your Name
+            AnaNiko
           </Link>
 
           {/* Desktop Navigation */}
@@ -43,7 +43,7 @@ const Navigation = () => {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent>
+            <SheetContent className="bg-red-500">
               <div className="flex flex-col gap-4 mt-8">
                 {navItems.map((item) => (
                   <Link
