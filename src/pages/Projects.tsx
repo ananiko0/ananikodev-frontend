@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { pagesMetadata } from "../config/metadata";
+import { ProjectDescriptions } from "@/components/sections/ProjectDescriptions";
 
 function Projects() {
   const meta = pagesMetadata.projects;
@@ -10,7 +11,9 @@ function Projects() {
         <meta name="description" content={meta.description} />
         <meta name="keywords" content={meta.keywords} />
       </Helmet>
-      <div>Projects</div>
+      <div className="max-w-5xl mx-auto">
+        <ProjectDescriptions />
+      </div>
     </>
   );
 }

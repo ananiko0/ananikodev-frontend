@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { pagesMetadata } from "../config/metadata";
+import { TimelineDemo } from "@/components/sections/Timeline";
 
 function About() {
   const meta = pagesMetadata.about;
@@ -10,7 +11,9 @@ function About() {
         <meta name="description" content={meta.description} />
         <meta name="keywords" content={meta.keywords} />
       </Helmet>
-      <div>About Page</div>
+      <div className="max-w-5xl mx-auto">
+        <TimelineDemo />
+      </div>
     </>
   );
 }
