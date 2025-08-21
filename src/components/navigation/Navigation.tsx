@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Navigation = () => {
   const navItems = [
@@ -43,16 +48,18 @@ const Navigation = () => {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent className="bg-red-500">
+            <SheetContent className="bg-white">
               <div className="flex flex-col gap-4 mt-8">
                 {navItems.map((item) => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    className="text-lg font-medium transition-colors hover:text-primary"
-                  >
-                    {item.name}
-                  </Link>
+                  <SheetClose asChild key={item.path}>
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className="text-lg font-medium transition-colors hover:text-primary"
+                    >
+                      {item.name}
+                    </Link>
+                  </SheetClose>
                 ))}
               </div>
             </SheetContent>
