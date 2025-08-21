@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
-import { Badge } from "../badge";
 import ProjectLinks from "./ProjectLinks";
+import ProjectTech from "./ProjectTech";
 
 interface ProjectItemProps {
   title: string;
@@ -28,13 +28,7 @@ function ProjectItem({
 
       <p className="text-muted-foreground mb-4">{description}</p>
 
-      <div className="flex flex-wrap gap-2 mb-4">
-        {tech.map((item) => (
-          <Badge key={item} variant="secondary" className="text-xs">
-            {item}
-          </Badge>
-        ))}
-      </div>
+      <ProjectTech tech={tech} />
 
       <ProjectLinks
         liveUrl={liveUrl}
