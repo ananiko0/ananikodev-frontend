@@ -29,7 +29,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center justify-center px-4 w-full max-w-4xl">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">
-          Hi, I'm Your Name 👋
+          Hi, I'm Ana 👋
         </h1>
 
         <p className="text-neutral-600 dark:text-neutral-200 text-sm md:text-base mb-2">
@@ -39,10 +39,18 @@ const Hero = () => {
         <TypewriterEffectSmooth words={words} />
 
         <div className="flex flex-col md:flex-row gap-4 mt-8">
-          <Button asChild size="lg">
-            <Link to="/projects">View My Projects</Link>
+          <Button
+            asChild
+            size="lg"
+            className="bg-white transition-colors duration-300"
+          >
+            <Link to="/projects">My Projects</Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button
+            asChild
+            size="lg"
+            className="text-white bg-blue-500 hover:bg-blue-400 transition-colors duration-300"
+          >
             <Link to="/about">Learn More</Link>
           </Button>
         </div>

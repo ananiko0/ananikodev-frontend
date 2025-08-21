@@ -7,6 +7,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import drawing from "@/assets/Octagon/drawing.svg";
 
 const Navigation = () => {
   const navItems = [
@@ -24,9 +25,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto flex h-16 items-center justify-between">
           {/* Logo/Name */}
-          <Link to="/" className="text-xl font-bold">
-            AnaNiko
-          </Link>
+          <div className="flex items-center gap-[10px]">
+            <img src={drawing} alt="Logo" className="w-8 h-8" />
+            <Link to="/" className="text-xl font-bold text-blue-500">
+              AnaNiko
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:gap-6">
