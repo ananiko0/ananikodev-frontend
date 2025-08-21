@@ -8,7 +8,7 @@ export function ProjectDescriptions() {
     {
       title: "Portfolio",
       content: (
-        <div>
+        <div id={projects[2].detailsUrl}>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             This website is my personal portfolio — built both as a{" "}
             <strong>practice project</strong> and a way to showcase my work. I
@@ -46,7 +46,7 @@ export function ProjectDescriptions() {
     {
       title: "Token Auth",
       content: (
-        <div>
+        <div id={projects[1].detailsUrl}>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             <strong>NestJS Authentication API</strong> is a multi-factor
             authentication system with a flexible identity-based architecture,
@@ -146,7 +146,7 @@ export function ProjectDescriptions() {
     {
       title: "To-Do",
       content: (
-        <div>
+        <div id={projects[0].detailsUrl}>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             A <strong>single-page task management application</strong> built
             with <strong>React.js</strong>. This project was my{" "}

@@ -30,7 +30,7 @@ function ProjectLinks({ liveUrl, githubUrl, detailsUrl }: ProjectLinkProps) {
         Code
       </a>
       <Link
-        to={detailsUrl}
+        to={`/projects#${detailsUrl}`}
         rel="noopener noreferrer"
         className="flex items-center gap-1 text-muted-foreground hover:text-gray-500 transition-colors"
       >

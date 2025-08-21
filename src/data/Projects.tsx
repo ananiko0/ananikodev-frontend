@@ -9,7 +9,7 @@ const projects = [
     liveUrl: "https://project.com",
     githubUrl: "https://github.com/...",
     image: "/project1.png",
-    detailsUrl: "/projects",
+    detailsUrl: "auth",
   },
   {
     title: "Task Management System",
@@ -20,7 +20,7 @@ const projects = [
     liveUrl: "https://project2.com",
     githubUrl: "https://github.com/...",
     image: "/project2.png",
-    detailsUrl: "/projects",
+    detailsUrl: "todo",
   },
   {
     title: "Portfolio Website",
@@ -31,7 +31,7 @@ const projects = [
     liveUrl: "https://yourportfolio.com",
     githubUrl: "https://github.com/...",
     image: "/project3.png",
-    detailsUrl: "/projects",
+    detailsUrl: "portfolio",
   },
 ];
 
