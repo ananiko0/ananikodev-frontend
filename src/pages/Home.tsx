@@ -5,11 +5,12 @@ import AboutBrief from "@/components/sections/AboutBrief";
 import WorkExperience from "@/components/sections/WorkExperience";
 import Contact from "@/components/sections/Contact";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
+import PageTransition from "@/layouts/PageTransition";
 
 function Home() {
   const meta = pagesMetadata.home;
   return (
-    <>
+    <PageTransition>
       <Helmet>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
@@ -22,7 +23,7 @@ function Home() {
         <WorkExperience />
         <Contact />
       </div>
-    </>
+    </PageTransition>
   );
 }
 

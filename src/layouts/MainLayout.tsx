@@ -1,10 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Navigation from "@/components/navigation/Navigation";
+import ScrollToTop from "./ScrollToTop";
 
 const MainLayout = () => {
   return (
     <div className=" min-h-screen bg-background">
       {/* Navigation */}
+      <ScrollToTop />
       <Navigation />
 
       {/* Main Content */}
