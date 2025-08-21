@@ -147,7 +147,11 @@ export function ProjectDescriptions() {
   ];
   return (
     <div className="relative w-full overflow-clip">
-      <Timeline data={data} />
+      <Timeline
+        data={data}
+        mainTitle="Project Descriptions"
+        introTextArray={["something else also cool waha"]}
+      />
     </div>
   );
 }

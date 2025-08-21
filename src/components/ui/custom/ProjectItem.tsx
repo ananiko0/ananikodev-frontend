@@ -1,5 +1,6 @@
-import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Badge } from "../badge";
+import ProjectLinks from "./ProjectLinks";
 
 interface ProjectItemProps {
   title: string;
@@ -7,6 +8,7 @@ interface ProjectItemProps {
   tech: string[];
   liveUrl: string;
   githubUrl: string;
+  detailsUrl: string;
 }
 
 function ProjectItem({
@@ -15,6 +17,7 @@ function ProjectItem({
   tech,
   liveUrl,
   githubUrl,
+  detailsUrl,
 }: ProjectItemProps) {
   return (
     <div className="relative p-6">
@@ -33,27 +36,11 @@ function ProjectItem({
         ))}
       </div>
 
-      <div className="flex gap-4 text-sm">
-        <a
-          href={liveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
-        >
-          <ExternalLink className="h-4 w-4" />
-          Live Demo
-        </a>
-
-        <a
-          href={githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
-        >
-          <Github className="h-4 w-4" />
-          Code
-        </a>
-      </div>
+      <ProjectLinks
+        liveUrl={liveUrl}
+        githubUrl={githubUrl}
+        detailsUrl={detailsUrl}
+      />
     </div>
   );
 }

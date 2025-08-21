@@ -13,6 +13,7 @@ const FeaturedProjects = () => {
       liveUrl: "https://project.com",
       githubUrl: "https://github.com/...",
       image: "/project1.png",
+      detailsUrl: "/projects",
     },
     {
       title: "Task Management System",
@@ -24,6 +25,7 @@ const FeaturedProjects = () => {
       liveUrl: "https://project2.com",
       githubUrl: "https://github.com/...",
       image: "/project2.png",
+      detailsUrl: "/projects",
     },
     {
       title: "Portfolio Website",
@@ -34,6 +36,7 @@ const FeaturedProjects = () => {
       liveUrl: "https://yourportfolio.com",
       githubUrl: "https://github.com/...",
       image: "/project3.png",
+      detailsUrl: "/projects",
     },
   ];
 
@@ -53,6 +56,7 @@ const FeaturedProjects = () => {
                 tech={project.tech}
                 liveUrl={project.liveUrl}
                 githubUrl={project.githubUrl}
+                detailsUrl={project.detailsUrl}
               />
             </GridItem>
           ))}
