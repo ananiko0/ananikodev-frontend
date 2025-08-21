@@ -6,6 +6,7 @@ import WorkExperience from "@/components/sections/WorkExperience";
 import Contact from "@/components/sections/Contact";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import PageTransition from "@/layouts/PageTransition";
+import { ScrollFadeUp } from "@/layouts/ScrollRevealVariants";
 
 function Home() {
   const meta = pagesMetadata.home;
@@ -18,10 +19,18 @@ function Home() {
       </Helmet>
       <div>
         <Hero />
-        <AboutBrief />
-        <FeaturedProjects />
-        <WorkExperience />
-        <Contact />
+        <ScrollFadeUp>
+          <AboutBrief />
+        </ScrollFadeUp>
+        <ScrollFadeUp>
+          <FeaturedProjects />
+        </ScrollFadeUp>
+        <ScrollFadeUp>
+          <WorkExperience />
+        </ScrollFadeUp>
+        <ScrollFadeUp>
+          <Contact />
+        </ScrollFadeUp>
       </div>
     </PageTransition>
   );
