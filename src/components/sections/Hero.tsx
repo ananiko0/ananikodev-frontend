@@ -8,7 +8,7 @@ const Hero = () => {
     { text: "Building" },
     { text: "modern" },
     { text: "web" },
-    { text: "experiences", className: "text-blue-500 dark:text-blue-500" },
+    { text: "experiences", className: "text-primary dark:text-primary" },
   ];
 
   return (
@@ -42,16 +42,13 @@ const Hero = () => {
           <Button
             asChild
             size="lg"
-            className="bg-white transition-colors duration-300"
-          >
-            <Link to="/projects">My Projects</Link>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            className="text-white bg-blue-500 hover:bg-blue-400 transition-colors duration-300"
+            variant="outline"
+            className=" transition-colors duration-300 border-primary border-[2px]"
           >
             <Link to="/about">Learn More</Link>
+          </Button>
+          <Button asChild size="lg" className="transition-colors duration-300">
+            <Link to="/projects">My Projects</Link>
           </Button>
         </div>
       </div>

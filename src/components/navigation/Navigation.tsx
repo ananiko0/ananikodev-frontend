@@ -27,7 +27,7 @@ const Navigation = () => {
           {/* Logo/Name */}
           <div className="flex items-center gap-[10px]">
             <img src={drawing} alt="Logo" className="w-8 h-8" />
-            <Link to="/" className="text-xl font-bold text-blue-500">
+            <Link to="/" className="text-xl font-bold text-primary">
               AnaNiko
             </Link>
           </div>
