@@ -1,10 +1,9 @@
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack marketplace with real-time inventory management",
-    longDescription:
-      "Built a scalable e-commerce solution handling 1000+ products...",
-    tech: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+    title: "Token Auth",
+    description:
+      "A secure multi-factor authentication API featuring flexible identity management and advanced token security.",
+    tech: ["TypeScript", "Node.js", "PostgreSQL", "Redis", "Next.js"],
     features: ["Real-time updates", "Payment integration", "Admin dashboard"],
     liveUrl: "https://project.com",
     githubUrl: "https://github.com/...",
@@ -13,9 +12,9 @@ const projects = [
   },
   {
     title: "Task Management System",
-    description: "Collaborative project management tool with real-time updates",
-    longDescription: "Developed a comprehensive task management solution...",
-    tech: ["React", "TypeScript", "NestJS", "Redis"],
+    description:
+      "A React.js task management app with sign-in simulation, task lists, and CRUD functionality using React Context.",
+    tech: ["React", "Javascript"],
     features: ["Real-time collaboration", "Drag-and-drop", "Analytics"],
     liveUrl: "https://project2.com",
     githubUrl: "https://github.com/...",
@@ -25,8 +24,14 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "Modern portfolio with animations and responsive design",
-    longDescription: "The website you're currently viewing...",
-    tech: ["React", "TypeScript", "Tailwind", "Framer Motion"],
+    tech: [
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Framer Motion",
+      "ScadcnUI",
+      "AcertenityUI",
+    ],
     features: ["Responsive design", "Dark mode", "Animations"],
     liveUrl: "https://yourportfolio.com",
     githubUrl: "https://github.com/...",

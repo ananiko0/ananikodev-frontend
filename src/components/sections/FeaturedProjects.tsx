@@ -1,4 +1,4 @@
-import projects from "@/data/Projects";
+import projects from "@/data/projects";
 import ProjectItem from "../ui/custom/ProjectItem";
 import GridItem from "../ui/grid-item";
 
@@ -11,7 +11,7 @@ const FeaturedProjects = () => {
       <div className="max-w-5xl mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <GridItem>
+            <GridItem key={index} borderWidth={2}>
               <ProjectItem
                 key={index}
                 title={project.title}

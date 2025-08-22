@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import ProjectLinks from "./ProjectLinks";
 import ProjectTech from "./ProjectTech";
 
@@ -23,7 +22,6 @@ function ProjectItem({
     <div className="relative p-6">
       <div className="flex justify-between items-start mb-4">
         <h3 className="text-xl font-semibold">{title}</h3>
-        <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
       </div>
 
       <p className="text-muted-foreground mb-4">{description}</p>

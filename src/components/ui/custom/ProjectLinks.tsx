@@ -14,7 +14,7 @@ function ProjectLinks({ liveUrl, githubUrl, detailsUrl }: ProjectLinkProps) {
         href={liveUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-1 text-muted-foreground hover:text-gray-500 transition-colors"
+        className="flex items-center gap-1 text-muted-foreground hover:text-black transition-colors"
       >
         <ExternalLink className="h-4 w-4" />
         Live Demo
@@ -24,7 +24,7 @@ function ProjectLinks({ liveUrl, githubUrl, detailsUrl }: ProjectLinkProps) {
         href={githubUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-1 text-muted-foreground hover:text-gray-500 transition-colors"
+        className="flex items-center gap-1 text-muted-foreground hover:text-black transition-colors"
       >
         <Github className="h-4 w-4" />
         Code
@@ -32,7 +32,7 @@ function ProjectLinks({ liveUrl, githubUrl, detailsUrl }: ProjectLinkProps) {
       <Link
         to={`/projects#${detailsUrl}`}
         rel="noopener noreferrer"
-        className="flex items-center gap-1 text-muted-foreground hover:text-gray-500 transition-colors"
+        className="flex items-center gap-1 text-muted-foreground hover:text-black transition-colors"
       >
         <FileText className="h-4 w-4" />
         Details

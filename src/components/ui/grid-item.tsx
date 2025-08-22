@@ -4,10 +4,15 @@ import type { ReactNode } from "react";
 
 interface GridItemProps {
   children: ReactNode;
+  borderWidth?: number;
   className?: string;
 }
 
-const GridItem = ({ children, className = "" }: GridItemProps) => {
+const GridItem = ({
+  children,
+  className = "",
+  borderWidth = 1,
+}: GridItemProps) => {
   // Keep existing glowing effect logic here
 
   return (
@@ -19,6 +24,7 @@ const GridItem = ({ children, className = "" }: GridItemProps) => {
           disabled={false}
           proximity={64}
           inactiveZone={0.01}
+          borderWidth={borderWidth}
         />
         {/* Project content */}
         {children}

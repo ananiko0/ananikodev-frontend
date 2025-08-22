@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Brain, Code2, Palette, Sparkles } from "lucide-react";
+import GridItem from "../ui/grid-item";
 
 const AboutBrief = () => {
   return (
@@ -42,45 +43,58 @@ const AboutBrief = () => {
 
           {/* Right side - Quick Highlights */}
           <div className="space-y-4">
-            <div className="p-4 border rounded-lg flex items-start gap-3">
-              <Brain className="h-5 w-5 text-primary mt-1" />
-              <div>
-                <div className="font-semibold">Physics & Math Background</div>
-                <div className="text-sm text-muted-foreground">
-                  Strong foundation in abstract thinking
+            {/* <div className="p-4 border rounded-lg flex items-start gap-3"> */}
+            <GridItem className="min-h-0">
+              <div className="flex items-start gap-3">
+                <Brain className="h-5 w-5 text-primary mt-1" />
+                <div>
+                  <div className="font-semibold">Physics & Math Background</div>
+                  <div className="text-sm text-muted-foreground">
+                    Strong foundation in abstract thinking
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="p-4 border rounded-lg flex items-start gap-3">
-              <Code2 className="h-5 w-5 text-primary mt-1" />
-              <div>
-                <div className="font-semibold">Tech Stack</div>
-                <div className="text-sm text-muted-foreground">
-                  React • TypeScript • Node.js • NestJS • PostgreSQL
+            </GridItem>
+            {/* </div> */}
+            {/* <div className="p-4 border rounded-lg flex items-start gap-3"> */}
+            <GridItem className="min-h-0">
+              <div className="flex items-start gap-3">
+                <Code2 className="h-5 w-5 text-primary mt-1" />
+                <div>
+                  <div className="font-semibold">Tech Stack</div>
+                  <div className="text-sm text-muted-foreground">
+                    React • TypeScript • Node.js • NestJS • PostgreSQL
+                  </div>
                 </div>
               </div>
-            </div>
+            </GridItem>
+            {/* </div> */}
 
-            <div className="p-4 border rounded-lg flex items-start gap-3">
-              <Sparkles className="h-5 w-5 text-primary mt-1" />
-              <div>
-                <div className="font-semibold">Always Learning</div>
-                <div className="text-sm text-muted-foreground">
-                  Self-taught through Udemy & building projects
+            {/* <div className="p-4 border rounded-lg flex items-start gap-3"> */}
+            <GridItem className="min-h-0">
+              <div className="flex items-start gap-3">
+                <Sparkles className="h-5 w-5 text-primary mt-1" />
+                <div>
+                  <div className="font-semibold">Always Learning</div>
+                  <div className="text-sm text-muted-foreground">
+                    Self-taught through Udemy & building projects
+                  </div>
                 </div>
               </div>
-            </div>
+            </GridItem>
+            {/* </div> */}
 
-            <div className="p-4 border rounded-lg flex items-start gap-3">
-              <Palette className="h-5 w-5 text-primary mt-1" />{" "}
-              {/* Import from lucide-react */}
-              <div>
-                <div className="font-semibold">Beyond Code</div>
-                <div className="text-sm text-muted-foreground">
-                  Piano • Drawing • Psychology • Flow State
+            <GridItem className="min-h-0">
+              <div className="flex items-start gap-3">
+                <Palette className="h-5 w-5 text-primary mt-1" />{" "}
+                <div>
+                  <div className="font-semibold">Beyond Code</div>
+                  <div className="text-sm text-muted-foreground">
+                    Piano • Drawing • Psychology • Flow State
+                  </div>
                 </div>
               </div>
-            </div>
+            </GridItem>
           </div>
         </div>
       </div>

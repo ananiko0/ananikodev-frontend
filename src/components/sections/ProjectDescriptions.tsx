@@ -1,6 +1,6 @@
 import { Timeline } from "@/components/ui/timeline";
 import ProjectTech from "../ui/custom/ProjectTech";
-import projects from "@/data/Projects";
+import projects from "@/data/projects";
 import ProjectLinks from "../ui/custom/ProjectLinks";
 
 export function ProjectDescriptions() {
