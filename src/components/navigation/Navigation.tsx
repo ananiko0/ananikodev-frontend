@@ -7,7 +7,6 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import drawing from "@/assets/Octagon/drawing.svg";
 
 const Navigation = () => {
   const navItems = [

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import type { ReactNode } from "react";
 
 // Fade Up (default)
 export const ScrollFadeUp = ({ children, className = "", delay = 0 }: any) => (
