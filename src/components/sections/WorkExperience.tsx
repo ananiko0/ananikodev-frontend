@@ -1,7 +1,6 @@
-import techClassNames from "@/data/techList";
 import { Badge } from "../ui/badge";
 import GridItem from "../ui/grid-item";
-import { cn } from "@/lib/utils";
+import ProjectTech from "../ui/custom/ProjectTech";
 
 function WorkExperience() {
   return (
@@ -47,26 +46,17 @@ function WorkExperience() {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {[
-                "React",
-                "TypeScript",
-                "SCSS",
-                "Firebase",
-                "WebSocket",
-                "Backend API",
-                "Horizon UI",
-              ].map((tech) => (
-                <Badge
-                  key={tech}
-                  variant="secondary"
-                  className={cn(
-                    "text-xs transition-opacity duration-500 ease-in-out",
-                    techClassNames[tech] || "bg-muted"
-                  )}
-                >
-                  {tech}
-                </Badge>
-              ))}
+              <ProjectTech
+                tech={[
+                  "React",
+                  "TypeScript",
+                  "SCSS",
+                  "Firebase",
+                  "WebSocket",
+                  "Backend API",
+                  "Horizon UI",
+                ]}
+              />
             </div>
 
             {/* No demo/code links needed - it's understood proprietary */}

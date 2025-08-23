@@ -14,7 +14,7 @@ function ProjectTech({ tech }: ProjectTechProps) {
           key={item}
           variant="secondary"
           className={cn(
-            "text-xs transition-opacity duration-500 ease-in-out",
+            "text-xs transition-color duration-300 ease-in-out text-muted",
             techClassNames[item] || "bg-muted"
           )}
         >

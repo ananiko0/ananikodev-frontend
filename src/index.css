@@ -17,7 +17,7 @@ body {
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
 
-  --primary: 344 59% 57%; /* Example: Blue */
+  --primary: 266 54% 74%; /* Example: Blue */
   --primary-foreground: 210 40% 98%;
 
   --secondary: 24 97% 60%; /* Example: Green */
@@ -44,18 +44,18 @@ body {
 
   --radius: 0.5rem;
 
-  --tech-languages: 266 54% 74%;
-  --tech-languages-hover: 266 54% 80%;
+  --tech-languages: 266 50% 70%;
+  --tech-languages-hover: 266 50% 78%;
 
-  --tech-frameworks: 202 96% 73%;
-  --tech-frameworks-hover: 202 96% 80%;
+  --tech-frameworks: 200 90% 68%;
+  --tech-frameworks-hover: 200 90% 75%;
 
-  --tech-databases: 168 41% 68%;
-  --tech-databases-hover: 168 41% 75%;
+  --tech-databases: 170 40% 65%;
+  --tech-databases-hover: 170 40% 72%;
 
-  --tech-styling: 24 72% 68%;
-  --tech-styling-hover: 24 72% 75%;
+  --tech-styling: 30 70% 65%;
+  --tech-styling-hover: 30 70% 72%;
 
-  --tech-communication: 55 100% 81%;
-  --tech-communication-hover: 55 100% 86%;
+  --tech-communication: 326 55% 75%;
+  --tech-communication-hover: 326 55% 85%;
 }

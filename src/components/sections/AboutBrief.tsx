@@ -33,10 +33,10 @@ const AboutBrief = () => {
               English, Russian, or code - it's all about communication and
               problem-solving.
             </p>
-            <Button asChild variant="ghost" className="group">
+            <Button asChild className="group">
               <Link to="/about">
                 Discover My Full Journey
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 duration-500 ease-in-out" />
               </Link>
             </Button>
           </div>
@@ -46,7 +46,7 @@ const AboutBrief = () => {
             {/* <div className="p-4 border rounded-lg flex items-start gap-3"> */}
             <GridItem className="min-h-[0]">
               <div className="flex items-start gap-3">
-                <Brain className="h-5 w-5 text-primary mt-1" />
+                <Brain className="h-5 w-5 text-tech-languages mt-1" />
                 <div>
                   <div className="font-semibold">Physics & Math Background</div>
                   <div className="text-sm text-muted-foreground">
@@ -59,7 +59,7 @@ const AboutBrief = () => {
             {/* <div className="p-4 border rounded-lg flex items-start gap-3"> */}
             <GridItem className="min-h-[0]">
               <div className="flex items-start gap-3">
-                <Code2 className="h-5 w-5 text-primary mt-1" />
+                <Code2 className="h-5 w-5 text-tech-frameworks mt-1" />
                 <div>
                   <div className="font-semibold">Tech Stack</div>
                   <div className="text-sm text-muted-foreground">
@@ -73,7 +73,7 @@ const AboutBrief = () => {
             {/* <div className="p-4 border rounded-lg flex items-start gap-3"> */}
             <GridItem className="min-h-[0]">
               <div className="flex items-start gap-3">
-                <Sparkles className="h-5 w-5 text-primary mt-1" />
+                <Sparkles className="h-5 w-5 text-tech-databases mt-1" />
                 <div>
                   <div className="font-semibold">Always Learning</div>
                   <div className="text-sm text-muted-foreground">
@@ -86,7 +86,7 @@ const AboutBrief = () => {
 
             <GridItem className="min-h-[0]">
               <div className="flex items-start gap-3">
-                <Palette className="h-5 w-5 text-primary mt-1" />{" "}
+                <Palette className="h-5 w-5 text-tech-styling mt-1" />{" "}
                 <div>
                   <div className="font-semibold">Beyond Code</div>
                   <div className="text-sm text-muted-foreground">

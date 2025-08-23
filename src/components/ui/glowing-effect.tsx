@@ -144,7 +144,7 @@ const GlowingEffect = memo(
                   var(--black),
                   var(--black) calc(25% / var(--repeating-conic-gradient-times))
                 )`
-                  : `radial-gradient(circle, hsl(344, 59%, 57%) 10%, hsl(344, 59%, 57%) 20%),
+                  : `radial-gradient(circle, hsl(266, 54%, 74%) 10%, hsl(266, 54%, 74%) 20%),
                 radial-gradient(circle at 40% 40%, #d79f1e 5%, #d79f1e00 15%),
                 radial-gradient(circle at 60% 60%, #5a922c 10%, #5a922c00 20%), 
                 radial-gradient(circle at 40% 60%, #4c7894 10%, #4c789400 20%),
