@@ -44,7 +44,7 @@ const AboutBrief = () => {
           {/* Right side - Quick Highlights */}
           <div className="space-y-4">
             {/* <div className="p-4 border rounded-lg flex items-start gap-3"> */}
-            <GridItem className="min-h-0">
+            <GridItem className="min-h-[0]">
               <div className="flex items-start gap-3">
                 <Brain className="h-5 w-5 text-primary mt-1" />
                 <div>
@@ -57,7 +57,7 @@ const AboutBrief = () => {
             </GridItem>
             {/* </div> */}
             {/* <div className="p-4 border rounded-lg flex items-start gap-3"> */}
-            <GridItem className="min-h-0">
+            <GridItem className="min-h-[0]">
               <div className="flex items-start gap-3">
                 <Code2 className="h-5 w-5 text-primary mt-1" />
                 <div>
@@ -71,7 +71,7 @@ const AboutBrief = () => {
             {/* </div> */}
 
             {/* <div className="p-4 border rounded-lg flex items-start gap-3"> */}
-            <GridItem className="min-h-0">
+            <GridItem className="min-h-[0]">
               <div className="flex items-start gap-3">
                 <Sparkles className="h-5 w-5 text-primary mt-1" />
                 <div>
@@ -84,7 +84,7 @@ const AboutBrief = () => {
             </GridItem>
             {/* </div> */}
 
-            <GridItem className="min-h-0">
+            <GridItem className="min-h-[0]">
               <div className="flex items-start gap-3">
                 <Palette className="h-5 w-5 text-primary mt-1" />{" "}
                 <div>

@@ -8,13 +8,13 @@ function WorkExperience() {
         <h2 className="text-3xl font-bold">Work Experience</h2>
       </div>
       <div className="space-y-6">
-        <GridItem>
+        <GridItem borderWidth={3}>
           <div className="p-4">
             <div className="flex justify-between items-start mb-2">
-              <h3 className="text-xl font-semibold">Full-Stack Developer</h3>
+              <h3 className="text-xl font-semibold">React Developer</h3>
               <Badge variant="outline">2023-2024</Badge>
             </div>
-            <p className="text-muted-foreground mb-3">[Startup Name]</p>
+            <p className="text-muted-foreground mb-3">D4E</p>
 
             <p className="mb-4">
               Developed and maintained core features for a SaaS platform serving
@@ -23,21 +23,37 @@ function WorkExperience() {
 
             <div className="space-y-2 mb-4">
               <p className="text-sm">
-                • Built RESTful APIs with NestJS handling 10k+ daily requests
+                • Built multiple web applications using React.js, TypeScript,
+                and SCSS
               </p>
               <p className="text-sm">
-                • Implemented real-time notifications using WebSockets
+                • Integrated Firebase and backend APIs for authentication, data
+                storage, and dynamic content management
               </p>
               <p className="text-sm">
-                • Reduced page load time by 40% through optimization
+                • Developed an admin panel for platform management with features
+                like leaderboards and account control
               </p>
               <p className="text-sm">
-                • Collaborated with team of 5 developers using Agile
+                • Designed an interactive quiz platform with authentication,
+                authorization, and real-time communication via WebSocket
+              </p>
+              <p className="text-sm">
+                • Focused on scalable architecture, clean UI design, and smooth
+                user experience
               </p>
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {["React", "NestJS", "PostgreSQL", "Redis"].map((tech) => (
+              {[
+                "React",
+                "TypeScript",
+                "SCSS",
+                "Firebase",
+                "WebSocket",
+                "Backend API",
+                "Horizon UI",
+              ].map((tech) => (
                 <Badge key={tech} variant="secondary">
                   {tech}
                 </Badge>

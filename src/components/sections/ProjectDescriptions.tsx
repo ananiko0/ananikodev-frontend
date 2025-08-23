@@ -134,12 +134,20 @@ export function ProjectDescriptions() {
             ongoing and showcases my work on <strong>real-time features</strong>{" "}
             and user management.
           </p>
-          <ProjectTech tech={projects[1].tech} />
-          <ProjectLinks
-            liveUrl={projects[1].liveUrl}
-            githubUrl={projects[1].githubUrl}
-            detailsUrl={projects[1].detailsUrl}
+          <ProjectTech
+            tech={[
+              "React",
+              "TypeScript",
+              "SCSS",
+              "Firebase",
+              "WebSocket",
+              "Backend API",
+              "Horizon UI",
+            ]}
           />
+          <p className="text-xs text-muted-foreground mt-4">
+            * Proprietary codebase
+          </p>
         </div>
       ),
     },
