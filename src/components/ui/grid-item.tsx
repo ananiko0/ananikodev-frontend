@@ -16,8 +16,8 @@ const GridItem = ({
   // Keep existing glowing effect logic here
 
   return (
-    <li className={`min-h-[14rem] list-none ${className}`}>
-      <div className="relative h-full border p-2 md:p-3">
+    <li className={`list-none ${className}`}>
+      <div className="relative h-full border p-2 md:p-3 rounded-[5px]">
         <GlowingEffect
           spread={40}
           glow={true}

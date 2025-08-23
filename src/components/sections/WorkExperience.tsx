@@ -1,5 +1,7 @@
+import techClassNames from "@/data/techList";
 import { Badge } from "../ui/badge";
 import GridItem from "../ui/grid-item";
+import { cn } from "@/lib/utils";
 
 function WorkExperience() {
   return (
@@ -54,7 +56,14 @@ function WorkExperience() {
                 "Backend API",
                 "Horizon UI",
               ].map((tech) => (
-                <Badge key={tech} variant="secondary">
+                <Badge
+                  key={tech}
+                  variant="secondary"
+                  className={cn(
+                    "text-xs transition-opacity duration-500 ease-in-out",
+                    techClassNames[tech] || "bg-muted"
+                  )}
+                >
                   {tech}
                 </Badge>
               ))}

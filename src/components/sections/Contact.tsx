@@ -32,7 +32,7 @@ const Contact = () => {
                 }
                 className="group"
               >
-                <Card className="p-6 hover:shadow-lg transition-all  hover:-translate-y-1 duration-500 ease-in-out">
+                <Card className="p-6 hover:shadow-lg transition-all  hover:-translate-y-1 duration-500 ease-in-out rounded-[4px]">
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-500 ease-in-out">
                       <Icon className="h-5 w-5" />

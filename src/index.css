@@ -17,10 +17,10 @@ body {
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
 
-  --primary: 220 90% 56%; /* Example: Blue */
+  --primary: 344 59% 57%; /* Example: Blue */
   --primary-foreground: 210 40% 98%;
 
-  --secondary: 160 60% 45%; /* Example: Green */
+  --secondary: 24 97% 60%; /* Example: Green */
   --secondary-foreground: 222.2 47.4% 11.2%;
 
   --card: 0 0% 100%;
@@ -30,7 +30,7 @@ body {
   --popover-foreground: 222.2 84% 4.9%;
 
   --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
+  --muted-foreground: 215.4 10% 32%;
 
   --accent: 210 40% 96.1%;
   --accent-foreground: 222.2 47.4% 11.2%;
@@ -43,4 +43,19 @@ body {
   --ring: 222.2 84% 4.9%;
 
   --radius: 0.5rem;
+
+  --tech-languages: 266 54% 74%;
+  --tech-languages-hover: 266 54% 80%;
+
+  --tech-frameworks: 202 96% 73%;
+  --tech-frameworks-hover: 202 96% 80%;
+
+  --tech-databases: 168 41% 68%;
+  --tech-databases-hover: 168 41% 75%;
+
+  --tech-styling: 24 72% 68%;
+  --tech-styling-hover: 24 72% 75%;
+
+  --tech-communication: 55 100% 81%;
+  --tech-communication-hover: 55 100% 86%;
 }
