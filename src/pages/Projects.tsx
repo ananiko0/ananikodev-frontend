@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet-async";
 import { pagesMetadata } from "../config/metadata";
 import { ProjectDescriptions } from "@/components/sections/ProjectDescriptions";
 import PageTransition from "@/layouts/PageTransition";
+import Contact from "@/components/sections/Contact";
+import { ScrollFadeUp } from "@/layouts/ScrollRevealVariants";
 
 function Projects() {
   const meta = pagesMetadata.projects;
@@ -15,6 +17,9 @@ function Projects() {
       <div className="max-w-5xl mx-auto">
         <ProjectDescriptions />
       </div>
+      <ScrollFadeUp>
+        <Contact />
+      </ScrollFadeUp>
     </PageTransition>
   );
 }

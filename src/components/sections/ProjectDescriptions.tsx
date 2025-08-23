@@ -32,7 +32,9 @@ export function ProjectDescriptions() {
             site automatically...
           </p>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            After that I am planning to refractor my code
+            My workflow is to build a working version first, then refactor and
+            polish — a way to balance productivity with my perfectionist
+            tendencies.
           </p>
           <ProjectTech tech={projects[2].tech} />
           <ProjectLinks
@@ -85,11 +87,11 @@ export function ProjectDescriptions() {
             <strong>security best practices</strong>, and designing scalable
             authentication systems.
           </p>
-          <ProjectTech tech={projects[1].tech} />
+          <ProjectTech tech={projects[0].tech} />
           <ProjectLinks
-            liveUrl={projects[1].liveUrl}
-            githubUrl={projects[1].githubUrl}
-            detailsUrl={projects[1].detailsUrl}
+            liveUrl={projects[0].liveUrl}
+            githubUrl={projects[0].githubUrl}
+            detailsUrl={projects[0].detailsUrl}
           />
         </div>
       ),

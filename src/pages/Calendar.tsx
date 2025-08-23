@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { pagesMetadata } from "../config/metadata";
+import VirtuesLoading from "@/assets/Octagon/Loading";
 
 function Calendar() {
   const meta = pagesMetadata.calendar;
@@ -10,7 +11,9 @@ function Calendar() {
         <meta name="description" content={meta.description} />
         <meta name="keywords" content={meta.keywords} />
       </Helmet>
-      <div>Calendar Page</div>
+      <>
+        <VirtuesLoading />
+      </>
     </>
   );
 }

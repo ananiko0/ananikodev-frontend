@@ -1,7 +1,7 @@
 import { Timeline } from "@/components/ui/timeline";
-import portfolio from "../../assets/images/portfolio.png";
-import authapi from "../../assets/images/authapi.png";
 import ProjectLinks from "../ui/custom/ProjectLinks";
+import ProjectTech from "../ui/custom/ProjectTech";
+import projects from "@/data/projects";
 
 export function TimelineDemo() {
   const data = [
@@ -13,32 +13,27 @@ export function TimelineDemo() {
             <p className="text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
               Creating this portfolio website you’re looking at.
             </p>
-            <ProjectLinks liveUrl="/" githubUrl="/" detailsUrl="/" />
+            <ProjectTech tech={projects[2].tech} />
+            <ProjectLinks
+              liveUrl={projects[2].liveUrl}
+              githubUrl={projects[2].githubUrl}
+              detailsUrl={projects[2].detailsUrl}
+            />
           </div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Refreshing my React and frontend knowledge.
+            Refreshing my <strong>React</strong> and frontend knowledge.
           </p>
           <div className="flex flex-col gap-[10px]">
             <p className="text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-              Learned NestJS and built a token-based authentication system
+              Learned <strong>NestJS</strong> and built a{" "}
+              <strong>token-based </strong>
+              authentication system
             </p>
-            <ProjectLinks liveUrl="/" githubUrl="/" detailsUrl="/" />
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src={portfolio}
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src={authapi}
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            <ProjectTech tech={projects[0].tech} />
+            <ProjectLinks
+              liveUrl={projects[0].liveUrl}
+              githubUrl={projects[0].githubUrl}
+              detailsUrl={projects[0].detailsUrl}
             />
           </div>
         </div>
@@ -59,11 +54,25 @@ export function TimelineDemo() {
             started working on a new experimental project.
           </p>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            The startup I worked at failed due to lack of organization, but I’m
-            grateful for the lessons and experience.
+            The startup I worked at failed, but I’m grateful for the lessons and
+            experience.
           </p>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Continued working hard for the startup until then.
+          </p>
+          <ProjectTech
+            tech={[
+              "React",
+              "TypeScript",
+              "SCSS",
+              "Firebase",
+              "WebSocket",
+              "Backend API",
+              "Horizon UI",
+            ]}
+          />
+          <p className="text-xs text-muted-foreground mt-4">
+            * Proprietary codebase
           </p>
         </div>
       ),
@@ -78,29 +87,19 @@ export function TimelineDemo() {
           </p>
           <div className="flex flex-col gap-[10px]">
             <p className="text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-              Built my first independent React project: a to-do app
+              Built my first independent <strong>React</strong> project: a to-do
+              app
             </p>
-            <ProjectLinks liveUrl="/" githubUrl="/" detailsUrl="/" />
+            <ProjectTech tech={projects[1].tech} />
+            <ProjectLinks
+              liveUrl={projects[1].liveUrl}
+              githubUrl={projects[1].githubUrl}
+              detailsUrl={projects[1].detailsUrl}
+            />
           </div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Went skiing and broke my leg
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src={portfolio}
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src={authapi}
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-          </div>
         </div>
       ),
     },
@@ -109,10 +108,12 @@ export function TimelineDemo() {
       content: (
         <div className="flex flex-col gap-[40px]">
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Studied Node.js through Udemy courses.
+            Studied <strong>Node.js</strong> through <strong>Udemy</strong>{" "}
+            courses.
           </p>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Studied React through Udemy as well.
+            Studied <strong>React</strong> through <strong>Udemy</strong> as
+            well.
           </p>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Built my first simple website for the International Olympiad of
@@ -126,7 +127,8 @@ export function TimelineDemo() {
             Participated in Planck’s Olympiad (for hardcore physics students).
           </p>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Started learning HTML, CSS and Javascript.
+            Started learning <strong>HTML</strong>, <strong>CSS</strong> and{" "}
+            <strong>Javascript.</strong>
           </p>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Began working at school.

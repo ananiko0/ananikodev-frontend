@@ -13,9 +13,9 @@ interface VirtuesLoadingProps {
 const VirtuesLoading: React.FC<VirtuesLoadingProps> = ({
   size = 200,
   strokeColor = "#000000",
-  strokeWidth = 1.5,
+  strokeWidth = 2,
   duration = 3, // Slower drawing
-  delayBetweenShapes = 2,
+  delayBetweenShapes = 1,
   pauseBeforeReverse = 2,
 }) => {
   // Simple draw and reverse animation
@@ -150,9 +150,7 @@ const VirtuesLoading: React.FC<VirtuesLoadingProps> = ({
           color: strokeColor,
           fontFamily: "system-ui, -apple-system, sans-serif",
         }}
-      >
-        Loading...
-      </div>
+      ></div>
     </div>
   );
 };

@@ -1,5 +1,11 @@
+import VirtuesLoading from "@/assets/Octagon/Loading";
+
 function LoadingPage() {
-  return <div>Loading</div>;
+  return (
+    <>
+      <VirtuesLoading />
+    </>
+  );
 }
 
 export default LoadingPage;

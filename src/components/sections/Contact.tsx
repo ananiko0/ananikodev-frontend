@@ -1,35 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import contactLinks from "@/data/contacts";
+import { Mail } from "lucide-react";
 
 const Contact = () => {
-  const contactLinks = [
-    {
-      name: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com",
-      icon: Mail,
-    },
-    {
-      name: "LinkedIn",
-      value: "in/yourprofile",
-      href: "https://linkedin.com/in/yourprofile",
-      icon: Linkedin,
-    },
-    {
-      name: "GitHub",
-      value: "@yourusername",
-      href: "https://github.com/yourusername",
-      icon: Github,
-    },
-    {
-      name: "Phone",
-      value: "+995 5XX XXX XXX", // Georgian number format
-      href: "tel:+9955XXXXXXX",
-      icon: Phone,
-    },
-  ];
-
   return (
     <section className="py-20">
       <div className="max-w-4xl mx-auto px-4">
@@ -58,9 +32,9 @@ const Contact = () => {
                 }
                 className="group"
               >
-                <Card className="p-6 hover:shadow-lg transition-all  hover:-translate-y-1">
+                <Card className="p-6 hover:shadow-lg transition-all  hover:-translate-y-1 duration-500 ease-in-out">
                   <div className="flex items-center gap-4">
-                    <div className="p-3 bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    <div className="p-3 bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-500 ease-in-out">
                       <Icon className="h-5 w-5" />
                     </div>
                     <div>
