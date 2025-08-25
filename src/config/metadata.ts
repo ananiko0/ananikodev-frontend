@@ -18,9 +18,10 @@ export type PageName =
 //TODO: write real info
 export const siteMetadata = {
   siteName: "AnaNiko",
-  siteUrl: "https://yourportfolio.com",
-  defaultImage: "/images/default-preview.png",
+  siteUrl: "https://ananiko.dev/",
+  defaultImage: "https://ananiko.dev/images/og-image.png",
   twitterHandle: "@yourhandle",
+  author: "ananikoleishvili",
 };
 
 //TODO: write real descriptions
@@ -31,7 +32,7 @@ export const pagesMetadata: Record<PageName, PageMeta> = {
       "Full-stack developer specializing in React, TypeScript, and modern web technologies. Building elegant solutions to complex problems.",
     keywords:
       "full-stack developer, web developer, React, TypeScript, portfolio",
-    image: "/images/home-preview.png",
+    image: "/og-image.png",
   },
   about: {
     title: `About | ${siteMetadata.siteName}`,
