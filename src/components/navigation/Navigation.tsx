@@ -8,6 +8,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import drawing from "@/assets/drawing.svg";
+import ContactButton from "./ContactButton";
 
 const Navigation = () => {
   const navItems = [
@@ -33,7 +34,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:gap-6">
+          <div className="hidden md:flex md:gap-6 md:items-center">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -43,6 +44,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            <ContactButton />
           </div>
 
           {/* Mobile Navigation */}
@@ -65,6 +67,9 @@ const Navigation = () => {
                     </Link>
                   </SheetClose>
                 ))}
+                <SheetClose asChild>
+                  <ContactButton />
+                </SheetClose>
               </div>
             </SheetContent>
           </Sheet>

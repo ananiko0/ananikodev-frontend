@@ -1,6 +1,8 @@
 import { Badge } from "../ui/badge";
 import GridItem from "../ui/grid-item";
 import ProjectTech from "../ui/custom/ProjectTech";
+import { Link } from "react-router-dom";
+import { FileText } from "lucide-react";
 
 function WorkExperience() {
   return (
@@ -16,11 +18,6 @@ function WorkExperience() {
               <Badge variant="outline">2023-2024</Badge>
             </div>
             <p className="text-muted-foreground mb-3">D4E</p>
-
-            <p className="mb-4">
-              Developed and maintained core features for a SaaS platform serving
-              500+ users.
-            </p>
 
             <div className="space-y-2 mb-4">
               <p className="text-sm">
@@ -60,6 +57,15 @@ function WorkExperience() {
             </div>
 
             {/* No demo/code links needed - it's understood proprietary */}
+
+            <Link
+              to={`/projects#d4e`}
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-muted-foreground hover:text-black transition-colors"
+            >
+              <FileText className="h-4 w-4" />
+              Details
+            </Link>
             <p className="text-xs text-muted-foreground mt-4">
               * Proprietary codebase
             </p>

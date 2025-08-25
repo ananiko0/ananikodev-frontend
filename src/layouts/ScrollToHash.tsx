@@ -13,9 +13,14 @@ const ScrollToHash = () => {
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({
+          const navHeight = 130; // Your nav height in pixels
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - navHeight;
+
+          window.scrollTo({
+            top: offsetPosition,
             behavior: "smooth",
-            block: "start",
           });
         }
       }, 100);

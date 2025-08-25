@@ -48,7 +48,7 @@ export function ProjectDescriptions() {
     {
       title: "Token Auth",
       content: (
-        <div id={projects[1].detailsUrl}>
+        <div id={projects[0].detailsUrl}>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             <strong>NestJS Authentication API</strong> is a multi-factor
             authentication system with a flexible identity-based architecture,
@@ -99,7 +99,7 @@ export function ProjectDescriptions() {
     {
       title: "D4E",
       content: (
-        <div>
+        <div id="d4e">
           <h3>Informative Website About the Game</h3>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             A simple <strong>informative website</strong> built with{" "}
@@ -156,7 +156,7 @@ export function ProjectDescriptions() {
     {
       title: "To-Do",
       content: (
-        <div id={projects[0].detailsUrl}>
+        <div id={projects[1].detailsUrl}>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             A <strong>single-page task management application</strong> built
             with <strong>React.js</strong>. This project was my{" "}
@@ -177,11 +177,11 @@ export function ProjectDescriptions() {
             <strong>component structure</strong>, and{" "}
             <strong>user interactions</strong> in React.
           </p>
-          <ProjectTech tech={projects[0].tech} />
+          <ProjectTech tech={projects[1].tech} />
           <ProjectLinks
-            liveUrl={projects[0].liveUrl}
-            githubUrl={projects[0].githubUrl}
-            detailsUrl={projects[0].detailsUrl}
+            liveUrl={projects[1].liveUrl}
+            githubUrl={projects[1].githubUrl}
+            detailsUrl={projects[1].detailsUrl}
           />
         </div>
       ),
